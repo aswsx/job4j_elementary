@@ -11,6 +11,7 @@ public class FactorialTest {
         int rsl = Factorial.calc(5);
         assertThat(rsl, is(120));
     }
+
     @Test
     public void whenCalculateFactorialForZeroThenOne() {
         int rsl = Factorial.calc(0);

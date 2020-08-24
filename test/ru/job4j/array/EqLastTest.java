@@ -13,6 +13,7 @@ public class EqLastTest {
         int[] right = {5, 4, 3};
         assertThat(check(left, right), is(true));
     }
+
     @Test
     public void whenNotEq() {
         int[] left = {1, 2, 3};

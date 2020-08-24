@@ -15,6 +15,7 @@ public class MatrixSumTest {
         int rsl = MatrixSum.sum(in);
         assertThat(rsl, is(expect));
     }
+
     @Test
     public void whenTwo() {
         int[][] in = {
@@ -25,6 +26,7 @@ public class MatrixSumTest {
         int rsl = MatrixSum.sum(in);
         assertThat(rsl, is(expect));
     }
+
     @Test
     public void whenThree() {
         int[][] in = {

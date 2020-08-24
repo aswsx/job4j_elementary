@@ -15,6 +15,7 @@ public class MinTest {
                 is(0)
         );
     }
+
     @Test
     public void whenLastMin() {
         assertThat(
@@ -24,6 +25,7 @@ public class MinTest {
                 is(3)
         );
     }
+
     @Test
     public void whenMiddleMin() {
         assertThat(

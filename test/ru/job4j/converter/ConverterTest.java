@@ -13,6 +13,7 @@ public class ConverterTest {
         int out = Converter.rubleToEuro(in);
         Assert.assertEquals(expected, out);
     }
+
     @Test
     public void whenConvert240RblThen3Dlr() {
         int in = 240;

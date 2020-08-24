@@ -14,6 +14,7 @@ public class PointTest {
         double out = Point.distance(x1In, y1In, x2In, y2In);
         Assert.assertEquals(expected, out, 0.01);
     }
+
     @Test
     public void whenX0Y0X0Y2() {
         int x1In = 0;
