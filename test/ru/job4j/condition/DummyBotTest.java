@@ -13,7 +13,6 @@ public class DummyBotTest {
                 is("Привет, умник.")
         );
     }
-
     @Test
     public void whenByeBot() {
         assertThat(
@@ -21,7 +20,6 @@ public class DummyBotTest {
                 is("До скорой встречи.")
         );
     }
-
     @Test
     public void whenUnknownBot() {
         assertThat(

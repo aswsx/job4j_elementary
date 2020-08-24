@@ -17,7 +17,6 @@ public class X2Test {
         int rsl = X2.calc(a, b, c, x);
         assertThat(rsl, is(expected));
     }
-
     @Test
     public void whenABCOne() {
         int a = 1;
@@ -28,7 +27,6 @@ public class X2Test {
         int rsl = X2.calc(a, b, c, x);
         assertThat(rsl, is(expected));
     }
-
     @Test
     public void whenAZero() {
         int a = 0;
@@ -39,7 +37,6 @@ public class X2Test {
         int rsl = X2.calc(a, b, c, x);
         assertThat(rsl, is(expected));
     }
-
     @Test
     public void whenCZero() {
         int a = 1;
@@ -50,7 +47,6 @@ public class X2Test {
         int rsl = X2.calc(a, b, c, x);
         assertThat(rsl, is(expected));
     }
-
     @Test
     public void whenXZero() {
         int a = 1;

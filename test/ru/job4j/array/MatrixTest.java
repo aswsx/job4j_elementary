@@ -15,7 +15,6 @@ public class MatrixTest {
         };
         assertThat(table, is(expect));
     }
-
     @Test
     public void when4on4() {
         int[][] table = Matrix.multiple(4);

@@ -5,7 +5,6 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 public class SwitchArrayTest {
-
     @Test
     public void whenSwap0to3() {
         int[] input = {1, 2, 3, 4};
@@ -13,7 +12,6 @@ public class SwitchArrayTest {
         int[] rsl = SwitchArray.swap(input, 0, input.length - 1);
         assertThat(rsl, is(expect));
     }
-
     @Test
     public void whenSwap0to1() {
         int[] input = {1, 2, 3, 4};
@@ -21,7 +19,6 @@ public class SwitchArrayTest {
         int[] rsl = SwitchArray.swap(input, 0, 1);
         assertThat(rsl, is(expect));
     }
-
     @Test
     public void whenSwap2to3() {
         int[] input = {1, 2, 3, 4};

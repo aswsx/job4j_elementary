@@ -13,4 +13,3 @@ public class CheckPrimeNumber {
     }
 }
 
-//boolean prime = number > 1;

@@ -6,7 +6,6 @@ import static org.hamcrest.Matchers.is;
 import org.junit.Test;
 
 public class SkipNegativeTest {
-
     @Test
     public void skip() {
         int[][] in = {
