@@ -19,7 +19,6 @@ public class Point {
         this.z = z;
     }
 
-
     public static void main(String[] args) {
         Point firstPoint = new Point(0, 0, 0);
         Point secondPoint = new Point(1, 2, 3);
