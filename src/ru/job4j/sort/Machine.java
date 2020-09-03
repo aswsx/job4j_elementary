@@ -10,16 +10,12 @@ public class Machine {
         int size = 0;
         int index = 0;
         int change = money - price;
-        while (change > 0) {
-            for (int i = 0; i < COINS.length;) {
-                if (change >= COINS[i]) {
-                    change = change - COINS[i];
-                    rsl[index] = COINS[i];
-                    size = index + 1;
-                    index++;
-                } else {
-                    i++;
-                }
+        for (int i = 0; i < COINS.length; i++) {
+            while (change >= COINS[i]) {
+                change = change - COINS[i];
+                rsl[index] = COINS[i];
+                size = index + 1;
+                index++;
             }
         }
         return Arrays.copyOf(rsl, size);
