@@ -8,21 +8,19 @@ public class UserStore {
             if (user.getUsername().equals(login)) {
                 newUser = user;
                 break;
-            } else {
-                throw new UserNotFoundException("User not found");
             }
+        }
+        if (newUser == null) {
+            throw new UserNotFoundException("User not found");
         }
         return newUser;
     }
 
     public static boolean validate(User user) throws UserInvalidException {
-        boolean rsl = false;
-        if (user.isValid()) {
-            rsl = true;
-        } else {
+        if (!user.isValid() || user.getUsername().length() < 3) {
             throw new UserInvalidException("This user has no access");
         }
-        return rsl;
+        return true;
     }
 
     public static void main(String[] args) {
