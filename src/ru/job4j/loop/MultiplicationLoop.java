@@ -4,7 +4,8 @@ public class MultiplicationLoop {
     public static int mult(int a, int b) {
         int rsl = 1;
         for (int i = a; i <= b; i++) {
-           rsl *= i;
-        } return rsl;
+            rsl *= i;
+        }
+        return rsl;
     }
 }
