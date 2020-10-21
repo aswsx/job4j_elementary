@@ -37,9 +37,13 @@ public class Converter {
 //считываем элементы из линейного массива и записываем их в квадратный массив.
         int ind = 0;
         for (int i = 0; i < squareArraySize; i++) {
-            for (int j = 0; j < squareArraySize; j++) {
-                squareArray[i][j] = linearArray[ind];
-                ind++;
+            if (ind < linearArray.length - 1) {
+                for (int j = 0; j < squareArraySize; j++) {
+                    squareArray[i][j] = linearArray[ind];
+                    ind++;
+                }
+            } else {
+                break;
             }
         }
         return squareArray;
