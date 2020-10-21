@@ -29,21 +29,26 @@ public class Converter {
 // записываем их в линейный массив
         int index = 0;
         for (int i = 0; i < arrayLength; i++) {
-            for (int j = 0; j < arQty[j]; j++) {
-                linearArray[index] = array[i][j]; //Index 1 out of bounds for length 1
-                index++;
+            int size = arQty[i]; //количество проходов второго цикла
+            if (index < linearArray.length - 1) {
+                for (int j = 0; j < size; j++) {
+                    linearArray[index] = array[i][j];
+                    index++;
+                }
+            } else {
+                break;
             }
         }
 //считываем элементы из линейного массива и записываем их в квадратный массив.
         int ind = 0;
         for (int i = 0; i < squareArraySize; i++) {
-            if (ind < linearArray.length - 1) {
-                for (int j = 0; j < squareArraySize; j++) {
-                    squareArray[i][j] = linearArray[ind];
+            for (int j = 0; j < squareArraySize; j++) {
+                squareArray[i][j] = linearArray[ind];
+                if (ind < linearArray.length - 1) {
                     ind++;
+                } else {
+                    break;
                 }
-            } else {
-                break;
             }
         }
         return squareArray;
