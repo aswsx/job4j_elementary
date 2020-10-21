@@ -2,42 +2,46 @@ package ru.job4j.array;
 
 public class Converter {
     public static int[][] convertInSquareArray(int[][] array) {
-        int size = 0;
-        int qty = 0;
-        int len = array.length; //длина массива array (количество строк)
-
-        for (int[] ints : array) {
-            qty += ints.length; //количество элементов в array
+        int squareArraySize;//размер квадратного массива
+        int arrayElementQty = 0; //количество элементов массива array
+        int arrayLength = array.length; //длина массива array (количество строк)
+//вычисляем количество элементов
+        for (int[] rows : array) {
+            arrayElementQty += rows.length;
         }
-        int[] linear = new int[qty]; // линейный массив длиной равной кол-ву элементов array
-        double xxx = Math.sqrt(qty); // корень из количества элементов
-
+//создаем линейный массив длиной равной количеству элементов
+        int[] linearArray = new int[arrayElementQty];
+//вычисляем размер квадратного массива
+        double xxx = Math.sqrt(arrayElementQty); // корень из количества элементов
         if (xxx % 1 == 0) { // если корень целое число
-            size = (int) xxx; //размер квадратного массива равен корню
+            squareArraySize = (int) xxx; //размер квадратного массива равен корню
         } else {
-            size = (int) (xxx + 1);//иначе размер равен корень плюс 1
+            squareArraySize = (int) (xxx + 1);//иначе размер равен корень плюс 1
         }
-        int[][] result = new int[size][size]; //новый квадратный массив
-        int[] arQty = new int[len]; //новый линейный массив, количество элементов в каждой строке array
-        for (int i = 0; i < len; i++) {
+//создаем квадратный массив
+        int[][] squareArray = new int[squareArraySize][squareArraySize]; //новый квадратный массив
+//создаем линейный массив, заполненный длинами строк массива array, для использования в цикле
+        int[] arQty = new int[arrayLength]; //новый линейный массив, длиной равной количеству строк в array
+        for (int i = 0; i < arrayLength; i++) {
             arQty[i] = array[i].length; //заполняем новый массив длинами строк
         }
-
+//исходя из длины(кол-ва строк исходного массива array и длины каждой строки читаем элементы из array и
+// записываем их в линейный массив
         int index = 0;
-        for (int i = 0; i < len; i++) {
+        for (int i = 0; i < arrayLength; i++) {
             for (int j = 0; j < arQty[j]; j++) {
-                linear[index] = array[i][j]; //заполняем линейный массив элементами array
+                linearArray[index] = array[i][j]; //Index 1 out of bounds for length 1
                 index++;
             }
         }
-
+//считываем элементы из линейного массива и записываем их в квадратный массив.
         int ind = 0;
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                result[i][j] = linear[ind];
+        for (int i = 0; i < squareArraySize; i++) {
+            for (int j = 0; j < squareArraySize; j++) {
+                squareArray[i][j] = linearArray[ind];
                 ind++;
             }
         }
-        return result;
+        return squareArray;
     }
 }
