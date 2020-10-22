@@ -4,8 +4,7 @@ public class Converter {
     public static int[][] convertInSquareArray(int[][] array) {
         int squareArraySize; //размер квадратного массива
         int arrayElementQty = 0; //количество элементов массива array
-        int arrayLength = array.length; //длина массива array (количество строк)
-//расчет количества элементов
+       //расчет количества элементов
         for (int[] rows : array) {
             arrayElementQty += rows.length;
         }
@@ -20,23 +19,13 @@ public class Converter {
         }
 //создание квадратного массива
         int[][] squareArray = new int[squareArraySize][squareArraySize];
-//создание линейного массива, заполненного длинами строк массива array, для использования в цикле
-        int[] arQty = new int[arrayLength];
-        for (int i = 0; i < arrayLength; i++) {
-            arQty[i] = array[i].length; //заполнение нового массива длинами строк
-        }
 // исходя из длины (кол-ва строк исходного массива array) и длины каждой строки, чтение элементов из array и
 // запись их в линейный массив
         int index = 0;
-        for (int i = 0; i < arrayLength; i++) {
-            int size = arQty[i]; //количество проходов второго цикла
-            if (index <= linearArray.length - 1) {
-                for (int j = 0; j < size; j++) {
-                    linearArray[index] = array[i][j];
-                    index++;
-                }
-            } else {
-                break;
+        for (int[] rows : array) {
+            for (int elem : rows) {
+                linearArray[index] = elem;
+                index++;
             }
         }
 //считывание элементов из линейного массива и запись их в квадратный массив.
