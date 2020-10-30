@@ -25,9 +25,6 @@ public class SymmetricDiff {
             for (int i = 0; i < len - 1; i++) {
                 for (int j = i + 1; j < len; j++) {
                     if (merge[i] == merge[j]) {
-                        int temp = merge[i];
-                        //       for (int m = 0; m < len; m++) {
-                        //          if (merge[m] == temp) {
                         merge[i] = merge[i + 2];
                         len -= 2;
                     }

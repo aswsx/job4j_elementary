@@ -52,4 +52,3 @@ public class OrArray {
         return remove;
     }
 }
-
