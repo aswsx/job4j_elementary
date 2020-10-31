@@ -5,14 +5,19 @@ import java.util.Arrays;
 public class Split {
     public static char[][] split(char[] str, char c) {
         char[][] result = new char[str.length / 2][];
-        int commonCount = 1;
-        int m = 0;
-        int i = 0;
-        while (str[m] != c) {
-            for (int j = 0; j < result.length; j++) {
-                result[j][i++] = str[m++];
+        char[] temp = new char[str.length];
+        int commonCount = 0;
+        int index = 0;
+        for (char value : str) {
+            if (value != c) {
+                temp[index++] = value;
+            } else {
+                result[commonCount] = Arrays.copyOf(temp, index);
+                commonCount++;
+                index = 0;
             }
         }
-        return Arrays.copyOf(result, commonCount);
+        result[commonCount] = Arrays.copyOf(temp, index);
+        return Arrays.copyOf(result, commonCount + 1);
     }
 }
