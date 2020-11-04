@@ -3,8 +3,8 @@ package ru.job4j.array;
 public class SymmetricDiff {
     public static int[] diff(int[] left, int[] right) {
         int[] res = new int[0];
-        if (left.length == 0 && right.length == 0 ||
-                left.length == 1 && right.length == 1 && left[0] == right[0]) {
+        if (left.length == 0 && right.length == 0
+                || left.length == 1 && right.length == 1 && left[0] == right[0]) {
             return res;
         } else if (left.length == 1) {
             res = new int[1];
