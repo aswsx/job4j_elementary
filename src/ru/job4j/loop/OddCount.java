@@ -7,6 +7,7 @@ public class OddCount {
             if (i % 2 == 1) {
                 rsl++;
             }
-        }return rsl;
+        }
+        return rsl;
     }
 }
