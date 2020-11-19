@@ -1,7 +1,5 @@
 package ru.job4j.array;
 
-import java.util.Arrays;
-
 public class ArrayWithoutEvenElements {
     public static int[] changeData(int[] data) {
         int[] out = new int[data.length / 2];
