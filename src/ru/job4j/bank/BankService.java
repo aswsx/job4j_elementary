@@ -40,7 +40,7 @@ public class BankService {
         List<Account> accounts = users.get(user);
         if (accounts != null) {
             for (Account account : accounts) {
-                if (account != null && account.getRequisite().equals(requisite)) {
+                if (account.getRequisite().equals(requisite)) {
                     rslAccount = account;
                     break;
                 }
