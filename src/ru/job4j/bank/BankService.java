@@ -3,13 +3,13 @@ package ru.job4j.bank;
 import java.util.*;
 
 public class BankService {
-    private Map<User, List<Account>> users = new HashMap<>(); //все полизователи со счетами
+    private Map<User, List<Account>> users = new HashMap<>();
 
-    public void addUser(User user) { //добавляем пользователя в систему Map.put, сначала пустой new ArrayList<Account>(); проверить наличие пользователя
+    public void addUser(User user) {
         users.putIfAbsent(user, new ArrayList<>());
     }
 
-    public void addAccount(String passport, Account account) { //новый счет, пользователя найти по пасспорту use findByPassport, проверить наличие счета
+    public void addAccount(String passport, Account account) {
         User user = findByPassport(passport);
         if (user != null) {
             List<Account> userAccount = users.get(user);
@@ -23,7 +23,7 @@ public class BankService {
 
     }
 
-    public User findByPassport(String passport) { //ищем по паспорту foreach, Map.keySet
+    public User findByPassport(String passport) {
         User user = null;
         for (User key : users.keySet()) {
             if (key.getPassport().equals(passport)) {
@@ -34,7 +34,7 @@ public class BankService {
         return user;
     }
 
-    public Account findByRequisite(String passport, String requisite) { //ищем по реквизитам, находим пользователя > находим счета > находим счет
+    public Account findByRequisite(String passport, String requisite) {
         Account rslAccount = null;
         User user = findByPassport(passport);
         List<Account> accounts = users.get(user);
@@ -49,7 +49,7 @@ public class BankService {
         return rslAccount;
     }
 
-    public boolean transferMoney(String srcPasspord, String srcRequisite, //перевод денег№ если нет денег или не найден счет- false
+    public boolean transferMoney(String srcPasspord, String srcRequisite,
                                  String destPassport, String destRequisite, double amount) {
         boolean rsl = false;
         Account srcAccount = findByRequisite(srcPasspord, srcRequisite);
