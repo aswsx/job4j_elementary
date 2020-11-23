@@ -7,32 +7,20 @@ public class Converter {
             arrayElementQty += rows.length;
         }
 
-        int[] linearArray = new int[arrayElementQty];
-        int index = 0;
-        for (int[] rows : array) {
-            for (int elem : rows) {
-                linearArray[index] = elem;
-                index++;
-            }
-        }
-        int squareArraySize;
-        double sqArSize = Math.sqrt(arrayElementQty);
-        if (sqArSize % 1 == 0) {
-            squareArraySize = (int) sqArSize;
-        } else {
-            squareArraySize = (int) (sqArSize + 1);
-        }
-        int[][] squareArray = new int[squareArraySize][squareArraySize];
-        int ind = 0;
+        int sqArSize = (int) Math.ceil(Math.sqrt(arrayElementQty));
+        int[][] squareArray = new int[sqArSize][sqArSize];
+        int squareArRow = 0, squareArCell = 0;
 
-        while (ind < linearArray.length) {
-            for (int i = 0; i < squareArraySize; i++) {
-                for (int j = 0; j < squareArraySize; j++) {
-                        squareArray[i][j] = linearArray[ind];
-                        ind++;
-                    }
+        for (int[] rows : array) {
+            for (int cells : rows) {
+                squareArray[squareArRow][squareArCell] = cells;
+                squareArCell++;
+                if (squareArCell == sqArSize) {
+                    squareArCell = 0;
+                    squareArRow++;
                 }
             }
+        }
         return squareArray;
     }
 }
