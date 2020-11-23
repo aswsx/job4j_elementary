@@ -17,10 +17,10 @@ public class BackwardForTest {
         BackwardFor.out(5, 1);
         String ln = System.lineSeparator();
         assertThat(out.toString(), is(
-                "5" + ln +
-                        "4" + ln +
-                        "3" + ln +
-                        "2" + ln
+                "5" + ln
+                        + "4" + ln
+                        + "3" + ln
+                        + "2" + ln
         ));
     }
 

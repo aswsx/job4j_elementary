@@ -11,7 +11,9 @@ public class SymmetricDiff2 {
                 arr[k++] = left[i++];
             } else if (left[i] > right[j]) {
                 arr[k++] = right[j++];
-            } else if (left[i++] == right[j++]) { }
+            } else if (left[i++] == right[j++]) {
+                continue;
+            }
         }
         while (i < left.length) {
             arr[k++] = left[i++];

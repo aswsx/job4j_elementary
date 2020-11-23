@@ -28,8 +28,8 @@ public class MultipliersTest {
         Multipliers.out(2);
         String ln = System.lineSeparator();
         assertThat(out.toString(), is(
-                "1" + ln +
-                        "2" + ln
+                "1" + ln
+                        + "2" + ln
         ));
     }
 
@@ -40,10 +40,10 @@ public class MultipliersTest {
         Multipliers.out(6);
         String ln = System.lineSeparator();
         assertThat(out.toString(), is(
-                "1" + ln +
-                        "2" + ln +
-                        "3" + ln +
-                        "6" + ln
+                "1" + ln
+                        + "2" + ln
+                        + "3" + ln
+                        + "6" + ln
         ));
     }
 

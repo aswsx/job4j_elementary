@@ -17,11 +17,11 @@ public class SweetPriceTest {
         SweetPrice.out(10);
         String ln = System.lineSeparator();
         assertThat(out.toString(), is(
-                "10" + ln +
-                        "20" + ln +
-                        "30" + ln +
-                        "40" + ln +
-                        "50" + ln
+                "10" + ln
+                        + "20" + ln
+                        + "30" + ln
+                        + "40" + ln
+                        + "50" + ln
         ));
     }
 

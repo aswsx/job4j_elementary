@@ -7,11 +7,14 @@ public class RandomDream {
             num += 4;
         }
         int xxx = num % 4; //(int) rnd;
-        switch (xxx) {
-            case 1 -> prize = prizes[0];
-            case 2 -> prize = prizes[1];
-            case 3 -> prize = prizes[2];
-            case 0 -> prize = prizes[3];
+        if (xxx == 1) {
+            prize = prizes[0];
+        } else if (xxx == 2) {
+            prize = prizes[1];
+        } else if (xxx == 3) {
+            prize = prizes[2];
+        } else if (xxx == 0) {
+            prize = prizes[3];
         }
         return prize;
     }
