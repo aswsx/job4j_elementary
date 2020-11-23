@@ -11,6 +11,6 @@ public class ArProgression {
             }
             sum += data.get(i);
         }
-        return sum += data.get(data.size() - 1);
+        return sum + data.get(data.size() - 1);
     }
 }
