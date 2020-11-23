@@ -12,9 +12,11 @@ public class UniqueName {
     }
 
     public static class User {
-        private final String name;
+        private int id;
+        private String name;
 
-        public User(String name) {
+        public User(int id, String name) {
+            this.id = id;
             this.name = name;
         }
 
