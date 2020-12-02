@@ -1,0 +1,22 @@
+{
+  "name": "job4j_elementary",
+  "version": "1.0.0",
+  "description": "![Java CI with Maven](https://github.com/aswsx/job4j_elementary/workflows/Java%20CI%20with%20Maven/badge.svg)\r [![codecov](https://codecov.io/gh/aswsx/job4j_elementary/branch/master/graph/badge.svg?token=4G3KRY1F7Y)](https://codecov.io/gh/aswsx/job4j_elementary)",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aswsx/job4j_elementary.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aswsx/job4j_elementary/issues"
+  },
+  "homepage": "https://github.com/aswsx/job4j_elementary#readme"
+}
