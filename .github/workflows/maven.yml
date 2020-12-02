@@ -22,7 +22,3 @@ jobs:
           java-version: 14
       - name: Build with Maven
         run: mvn -B package --file pom.xml
-      - name: Test Coverage
-          uses: codecov/codecov-action@v1
-          with:
-            token: ${{ secrets.CODECOV_TOKEN }}
