@@ -1,0 +1,4 @@
+# codecov.yml
+
+fixes:
+  - "/home/runner/work/aswsx/job4j_elementary/::" # Correct paths
