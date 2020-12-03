@@ -24,7 +24,7 @@ jobs:
         run: mvn test jacoco:report
       - name: Upload to Codecov
           env:
-            CODECOV_TOKEN: $
+            CODECOV_TOKEN: "85919692-6cdc-4707-a04c-51794385f2ee"
           run: bash <(curl -s https://codecov.io/bash)
       - name: Pitest
           run: mvn test org.pitest:pitest-maven:mutationCoverage
