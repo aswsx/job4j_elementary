@@ -11,8 +11,8 @@ public class User {
 
     /**
      *Конструктор
-     * @param passport
-     * @param username
+     * @param passport приниметна вход паспорт клиента
+     * @param username принимает на вход имя клиента
      */
     public User(String passport, String username) {
         this.passport = passport;
@@ -21,7 +21,7 @@ public class User {
 
     /**
      *Геттер
-     * @return
+     * @return возвращает паспорт
      */
     public String getPassport() {
         return passport;
@@ -29,7 +29,7 @@ public class User {
 
     /**
      *Сеттер
-     * @param passport
+     * @param passport принимает на вход паспорт
      */
     public void setPassport(String passport) {
         this.passport = passport;
@@ -37,7 +37,7 @@ public class User {
 
     /**
      *Геттер
-     * @return
+     * @return возвращает имя клиента
      */
     public String getUsername() {
         return username;
@@ -45,7 +45,7 @@ public class User {
 
     /**
      *Сеттер
-     * @param username
+     * @param username принимает на вход имя клиента
      */
     public void setUsername(String username) {
         this.username = username;
