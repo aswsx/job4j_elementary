@@ -11,8 +11,8 @@ public class Account {
 
     /**
      *
-     * @param requisite
-     * @param balance
+     * @param requisite принимет на вход номер счета
+     * @param balance принимает на вход сумму
      */
     public Account(String requisite, double balance) {
         this.requisite = requisite;
@@ -21,7 +21,7 @@ public class Account {
 
     /**
      *
-     * @return
+     * @return возвращает номер счета
      */
     public String getRequisite() {
         return requisite;
@@ -29,7 +29,7 @@ public class Account {
 
     /**
      *
-     * @param requisite
+     * @param requisite принимает на вход номер счета
      */
     public void setRequisite(String requisite) {
         this.requisite = requisite;
@@ -37,7 +37,7 @@ public class Account {
 
     /**
      *
-     * @return
+     * @return возвращает баланс
      */
     public double getBalance() {
         return balance;
@@ -45,7 +45,7 @@ public class Account {
 
     /**
      *
-     * @param balance
+     * @param balance принимает на вход баланс
      */
     public void setBalance(double balance) {
         this.balance = balance;
@@ -53,8 +53,8 @@ public class Account {
 
     /**
      *
-     * @param o
-     * @return
+     * @param o принимает на вход объект
+     * @return возвращаетрезультат проверки уникальности счета
      */
     @Override
     public boolean equals(Object o) {
@@ -70,7 +70,7 @@ public class Account {
 
     /**
      *
-     * @return
+     * @return возвращает уникальный hash-код счета
      */
     @Override
     public int hashCode() {
