@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.hamcrest.Matchers.nullValue;
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import static ru.job4j.array.Cinema.Place;
 
