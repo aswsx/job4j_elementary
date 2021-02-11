@@ -7,17 +7,17 @@ public class Merge {
         int leftPos = 0, rightPos = 0;
         for (int i = 0; i < rsl.length; i++) {
             if (leftPos == left.length) {
-                rsl[i] = right[rightPos];
-                rightPos++;
+                rsl[i] = right[rightPos++];
+               //rightPos++;
             } else if (rightPos == right.length) {
-                rsl[i] = left[leftPos];
-                leftPos++;
+                rsl[i] = left[leftPos++];
+                //leftPos++;
             } else if (left[leftPos] < right[rightPos]) {
-                rsl[i] = left[leftPos];
-                leftPos++;
+                rsl[i] = left[leftPos++];
+               // leftPos++;
             } else {
-                rsl[i] = right[rightPos];
-                rightPos++;
+                rsl[i] = right[rightPos++];
+               // rightPos++;
             }
         }
         return rsl;
