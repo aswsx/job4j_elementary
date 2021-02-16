@@ -6,7 +6,7 @@ public class RandomDream {
         if (num < 4) {
             num += 4;
         }
-        int xxx = num % 4; //(int) rnd;
+        int xxx = num % 4;
         if (xxx == 1) {
             prize = prizes[0];
         } else if (xxx == 2) {
