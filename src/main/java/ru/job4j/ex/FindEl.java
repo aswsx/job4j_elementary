@@ -11,18 +11,18 @@ public class FindEl extends Exception {
             }
             count++;
         }
-            if (rsl == -1) {
-                throw new ElementNotFoundException("Элемент не найден");
-            }
-            return rsl;
+        if (rsl == -1) {
+            throw new ElementNotFoundException("Элемент не найден");
         }
+        return rsl;
+    }
 
-        public static void main (String[]args){
-            String[] value = {"1", "2", "3", "4", "5"};
-            try {
-                indexOf(value, "");
-            } catch (ElementNotFoundException e) {
-                e.printStackTrace();
-            }
+    public static void main(String[] args) {
+        String[] value = {"1", "2", "3", "4", "5"};
+        try {
+            indexOf(value, "");
+        } catch (ElementNotFoundException e) {
+            e.printStackTrace();
         }
     }
+}
