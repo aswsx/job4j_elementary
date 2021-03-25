@@ -4,23 +4,22 @@ import java.util.Arrays;
 
 public class DiffArray {
     public static int[] diff(int[] left, int[] right) {
-        int[] res = new int[0];
+        int[] res;
         if (left.length == 0) {
-            return res;
-        } else if (left.length == 1) {
-            res = new int[1];
-            res[0] = left[0];
+            return new int[0];
+        } else if (right.length == 0) {
+            return left;
         } else {
-            res = new int[left.length + right.length];
-            int l = 0;
+           int[] rsl = new int[left.length];
+            int count = 0;
             for (int k : left) {
                 for (int m : right) {
                     if (k != m) {
-                        res[l++] = k;
+                        rsl[count++] = k;
                     }
                 }
             }
-            res = Arrays.copyOf(res, l);
+            res = Arrays.copyOf(rsl, count);
         }
         return res;
     }
