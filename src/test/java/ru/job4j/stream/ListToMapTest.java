@@ -13,12 +13,15 @@ public class ListToMapTest {
     public void convert() {
         List<Student> input = List.of(
                 new Student(1, "Челентано"),
+                new Student(1, "Челентано"),
+                new Student(1, "Сталлоне"),
                 new Student(2, "Делон"),
                 new Student(3, "Депардье"),
                 new Student(4, "Ришар")
         );
         Map<String, Student> rsl = ListToMap.convert(input);
         Map expect = Map.of(
+                "Сталлоне", new Student(1, "Сталлоне"),
                 "Челентано", new Student(1, "Челентано"),
                 "Делон", new Student(2, "Делон"),
                 "Депардье", new Student(3, "Депардье"),
