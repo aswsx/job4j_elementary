@@ -12,12 +12,8 @@ public class PutIfAbsent {
     }
 
     public boolean addNewElement(User u) {
-       // boolean rsl = false;
-        //if (!users.containsKey(u.getId())) {
-            users.putIfAbsent(u.getId(), u);
-            return users.containsValue(u);
-      //  }
-     //   return rsl;
+        users.putIfAbsent(u.getId(), u);
+        return users.containsValue(u);
     }
 
     public static class User {
