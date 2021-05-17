@@ -14,7 +14,7 @@ public class Account {
      * @param requisite принимает на вход номер счета
      * @param balance принимает на вход сумму
      */
-    public Account(String requisite, double balance) {
+    public Account(final String requisite, final double balance) {
         this.requisite = requisite;
         this.balance = balance;
     }
@@ -31,7 +31,7 @@ public class Account {
      *
      * @param requisite принимает на вход номер счета
      */
-    public void setRequisite(String requisite) {
+    public void setRequisite(final String requisite) {
         this.requisite = requisite;
     }
 
@@ -47,7 +47,7 @@ public class Account {
      *
      * @param balance принимает на вход баланс
      */
-    public void setBalance(double balance) {
+    public void setBalance(final double balance) {
         this.balance = balance;
     }
 
