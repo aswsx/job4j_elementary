@@ -4,8 +4,8 @@ import static java.lang.Math.sqrt;
 import static java.lang.Math.pow;
 
 public class Point {
-    private int x;
-    private int y;
+    private final int x;
+    private final int y;
     private int z;
 
     public Point(int first, int second) {
@@ -20,8 +20,8 @@ public class Point {
     }
 
     public static void main(String[] args) {
-        Point firstPoint = new Point(0, 0, 0);
-        Point secondPoint = new Point(1, 2, 3);
+        var firstPoint = new Point(0, 0, 0);
+        var secondPoint = new Point(1, 2, 3);
         double result = firstPoint.distance3D(secondPoint);
         System.out.println("result (0, 0, 0) to (1, 2, 3) " + result);
         result = Point.distance(0, 0, 2, 0);
