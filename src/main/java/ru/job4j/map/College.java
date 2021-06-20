@@ -17,12 +17,6 @@ public class College {
                 .findFirst()
                 .orElse(null);
     }
-//        for (Student s : students.keySet()) {
-//            if (s.getAccount().equals(account)) {
-//                return s;
-//            }
-//        }
-//    }
 
     public Subject findBySubjectName(String account, String name) {
         Student a = findByAccount(account);
