@@ -4,10 +4,13 @@ import java.util.*;
 
 public class Departments {
 
+    private Departments() {
+    }
+
     public static List<String> fillGaps(List<String> deps) {
         Set<String> tmp = new LinkedHashSet<>();
         for (String value : deps) {
-            String start = "";
+            var start = "";
             for (String el : value.split("/")) {
                 start = start.equals("") ? el : start + "/" + el;
                 tmp.add(start);
