@@ -4,7 +4,9 @@ public class MaxLengthSeria {
     public static int find(int[] array) {
         int length = 1;
         int max = 1;
-        if (array.length == 0) return 0;
+        if (array.length == 0) {
+            return 0;
+        }
         for (int i = 0; i < array.length - 1; i++) {
             if (array[i + 1] >= array[i]) {
                 length++;
