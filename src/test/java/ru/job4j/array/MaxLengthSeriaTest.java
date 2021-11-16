@@ -14,6 +14,7 @@ public class MaxLengthSeriaTest {
         assertEquals(4, MaxLengthSeria.find(new int[] {1, 2, 0, 1, 2, 3}));
         assertEquals(4, MaxLengthSeria.find(new int[] {1, 2, 1, 1, 2, 3}));
         assertEquals(1, MaxLengthSeria.find(new int[] {3, 2, 1}));
+        assertEquals(9, MaxLengthSeria.find(new int[] {6,7,8,9,10,11,1,11,12,13,14,15,16,17,18,2,3,5,2,6,3}));
     }
 
 }
