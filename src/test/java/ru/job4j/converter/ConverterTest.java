@@ -3,8 +3,6 @@ package ru.job4j.converter;
 import org.junit.Test;
 import org.junit.Assert;
 
-import static org.junit.Assert.*;
-
 public class ConverterTest {
     @Test
     public void whenConvert140RblThen2Euro() {
