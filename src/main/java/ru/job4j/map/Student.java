@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class Student {
     private String name;
-    private String account;
-    private String group;
+    private final String account;
+    private final String group;
 
     public Student(String name, String account, String group) {
         this.name = name;
@@ -17,24 +17,16 @@ public class Student {
         return name;
     }
 
+    public String getGroup() {
+        return group;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
 
     public String getAccount() {
         return account;
-    }
-
-    public void setAccount(String account) {
-        this.account = account;
-    }
-
-    public String getGroup() {
-        return group;
-    }
-
-    public void setGroup(String group) {
-        this.group = group;
     }
 
     @Override

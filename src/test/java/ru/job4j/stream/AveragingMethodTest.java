@@ -27,6 +27,7 @@ public class AveragingMethodTest {
                 "Amazon", 27.5D,
                 "Microsoft", 40D
         );
-        assertEquals(expect, AveragingMethod.averaging(List.of(w1, w2, w3, w4, w5, w6)));
+        assertEquals(expect, AveragingMethod.averaging(List
+                .of(w1, w2, w3, w4, w5, w6)));
     }
 }
