@@ -1,18 +1,19 @@
 package ru.job4j.condition;
 
 public class Max {
+    private Max() {
+    }
+
     public static int max(int left, int right) {
-        int result = Math.max(left, right);
-        return result;
+        return Math.max(left, right);
     }
 
     public static int max(int first, int second, int third) {
-        int result = Math.max(first, max(second, third));
-        return result;
+        return Math.max(first, max(second, third));
     }
 
     public static int max(int first, int second, int third, int fourth) {
-        int result = Math.max(Math.max(first, second), Math.max(third, fourth));
-        return result;
+        return Math.max(Math.max(first, second), Math.max(third, fourth));
     }
 }
+
