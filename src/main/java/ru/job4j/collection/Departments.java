@@ -12,8 +12,8 @@ public class Departments {
         for (String value : deps) {
             var start = "";
             for (String el : value.split("/")) {
-                start = start.equals("") ? el : start + "/" + el;
-                tmp.add(start);
+                tmp.add(start + el);
+                start += el + "/";
             }
         }
         return new ArrayList<>(tmp);
