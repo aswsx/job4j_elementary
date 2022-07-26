@@ -14,10 +14,10 @@ public class MostUsedCharacter {
             letters.computeIfPresent(letter, (key, value) -> value + 1);
             letters.putIfAbsent(letter, 0);
         }
-        for (char key : letters.keySet()) {
-            if (letters.get(key) > counter) {
-                rsl = key;
-                counter = letters.get(key);
+        for (Map.Entry<Character, Integer> entry : letters.entrySet()) {
+            if (entry.getValue() > counter) {
+                rsl = entry.getKey();
+                counter = entry.getValue();
             }
         }
         return rsl;
