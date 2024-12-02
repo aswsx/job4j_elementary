@@ -10,9 +10,6 @@ public class UniqueText {
         String[] text = duplicateText.split(" ");
         HashSet<String> check = new HashSet<>();
 
-//        for (String words : origin) {
-//            check.add(words);
-//        }
         Collections.addAll(check, origin);
 
         for (String str : text) {

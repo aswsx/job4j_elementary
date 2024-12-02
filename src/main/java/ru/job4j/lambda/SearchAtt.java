@@ -28,14 +28,3 @@ public class SearchAtt {
         return rsl;
     }
 }
-
-//
-//    public static List<Attachment> filterSize(List<Attachment> list) {
-//        Predicate<Attachment> func = new Predicate<>() {
-//            @Override
-//            public boolean test(Attachment att) {
-//                return att.getSize() > 100;
-//            }
-//        };
-//        return filter(list, func);
-//    }

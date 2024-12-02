@@ -7,16 +7,7 @@ import java.util.Set;
 public class Jackpot {
 
     public static boolean checkYourWin(String[] combination) {
-       Set<String> rsl = new HashSet<>(Arrays.asList(combination));
-       return rsl.size() == 1;
+        Set<String> rsl = new HashSet<>(Arrays.asList(combination));
+        return rsl.size() == 1;
     }
 }
-//    public static boolean checkYourWin(String[] combination) {
-//        for (String str : combination) {
-//            if (!(str.equals(combination[0]))) {
-//                return false;
-//            }
-//        }
-//        return true;
-//    }
-// }

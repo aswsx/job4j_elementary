@@ -12,7 +12,7 @@ public class ListToMap {
                         Collectors.toMap(
                                 Student::getSurname,
                                 student -> student,
-                                (student, student2) -> student  //.equals(student2) ? student : student2
+                                (student, student2) -> student
                         )
                 );
     }
