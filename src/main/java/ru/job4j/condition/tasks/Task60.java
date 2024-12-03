@@ -18,7 +18,6 @@ public class Task60 {
         } else if (a != b && a != c && b != c) {
             System.out.println("Равных нет");
         } else {
-            // Check for equal pairs and compare the third value
             if (a == b) {
                 System.out.println(a > c ? "Первое и второе равны, третье меньше" : "Первое и второе равны, третье больше");
             } else if (b == c) {
